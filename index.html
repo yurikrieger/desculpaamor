@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me desculpa Nitinha ?</title>
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+        }
+        .buttons {
+            position: relative;
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #nao {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desculpa eu, Nitinha?</h1>
+    <div class="buttons">
+        <button onclick="window.location.href='teamo.html'">Sim❤️</button>
+        <button id="nao">Não😠</button>
+    </div>
+
+    <script>
+        const botaoNao = document.getElementById('nao');
+        botaoNao.addEventListener('mouseenter', () => {
+            const maxX = Math.min(400, window.innerWidth) - botaoNao.clientWidth;
+            const maxY = Math.min(400, window.innerHeight) - botaoNao.clientHeight;
+            const randX = Math.random() * maxX;
+            const randY = Math.random() * maxY;
+            botaoNao.style.left = `${randX}px`;
+            botaoNao.style.top = `${randY}px`;
+        });
+    </script>
+</body>
+</html>
+
+
